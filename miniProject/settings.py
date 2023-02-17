@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'miniApp.apps.MiniappConfig',
-    'fontawesome_5',
+    'fontawesome_5'
 ]
 
 MIDDLEWARE = [
