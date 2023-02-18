@@ -77,10 +77,10 @@ class Teacher(models.Model):
     teacherLName = models.CharField(max_length=50, default="")
     teacherAddress = models.TextField(max_length=400, default="")
     teacherBirthdate = models.DateField(default=None)
+    facName = models.ForeignKey(Faculty, on_delete=models.CASCADE, default="")
+    majorProName = models.ForeignKey(MajorProgram, on_delete=models.CASCADE, default="")
+    major = models.ForeignKey(Major, on_delete=models.CASCADE, default="")
 
     def __str__(self):
         return self.teacherId + ":" + self.gender.genName + ":" + self.teacherFName + ":" + self.teacherLName
 
-class register(models.Model):
-    resgisId = models.CharField(max_length = 15, primary_key=True, default="")
-    resgisDate = models.DateTimeField(auto_now_add = True)

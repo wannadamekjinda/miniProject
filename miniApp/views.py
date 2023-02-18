@@ -15,3 +15,6 @@ def addRigister(request):
 
 def delRigister(request):
     return render(request,"delRigister.html")
+
+def faculty(request):
+    return render(request,"faculty.html")
