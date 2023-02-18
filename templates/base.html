@@ -18,25 +18,25 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 text-center" style="background-color: #75E18E">
+            <div class="col-12 text-center" style="background-color: #8866CB">
                 {% include 'header.html' %}
             </div>
         </div>
 
         <div class="row">
-            <div class="col-12"  style="background-color: white">
+            <div class="col-12" style="background-color: mediumpurple; ">
                 {% include 'navbar.html' %}
             </div>
         </div>
-
+    <br>
         <div class="row">
             {% block content %}
 
             {%  endblock %}
         </div>
-
+    <br>
     <footer>
-        <div class="row">
+        <div class="row" style="background-color: #8866CB">
             {% include 'footer.html' %}
         </div>
     </footer>

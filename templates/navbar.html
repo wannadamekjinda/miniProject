@@ -1,4 +1,27 @@
 {% load static %}
+{% load fontawesome_5 %}
+{% fontawesome_5_static %}
 <div class="row">
+    <div class="col-10">
+        <ul class="nav justify-content-start rounded-5 ">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'base' %}" style="color: #ffffff"><i class="fas fa-home"></i><b> หน้าหลัก</b></a>
+            </li>
 
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" style="color: #ffffff"><b>Dropdown</b></a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Link</a></li>
+                <li><a class="dropdown-item" href="#">Another link</a></li>
+                <li><a class="dropdown-item" href="#">A third link</a></li>
+            </ul>
+        </ul>
+    </div>
+
+    <div class="col-2">
+        <div class="text-center te">
+            <a href="{% url 'userLogin' %}" class="btn rounded-3" style="background-color: #bfd1ec">
+            <i class="fas fa-sign-in-alt"></i><b>     LOGIN</b>
+            </a>
+        </div>
+    </div>
 </div>
