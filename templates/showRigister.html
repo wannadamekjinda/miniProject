@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load fontawesome_5 %}
 {% block content %}
 <div class="row">
         <div class="col col-12 text-primary"><h3>รายวิชาที่ลงทะเบียน</h3></div>
@@ -24,6 +25,53 @@
             </h6>
         </div>
     </div>
-
 </div>
+
+    <table class="table table-bordered">
+  <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">รหัสวิชา</th>
+        <th scope="col">ชื่อวิชา</th>
+        <th scope="col">หน่วยกิต</th>
+        <th scope="col">กลุ่มเรียน</th>
+        <th scope="col">อาจารย์ผู้สอน</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+        <td>
+            <button class="btn btn-sm  btn-danger disabled"> ถอน</button>
+        </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+        <td>
+            <button class="btn btn-sm  btn-danger disabled"> ถอน</button>
+        </td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+        <td>
+            <button class="btn btn-sm  btn-danger disabled"> ถอน</button>
+        </td>
+    </tr>
+  </tbody>
+</table>
 {% endblock %}
