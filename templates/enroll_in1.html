@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content %}
+<br><br>
+<div class="row" style="padding-left: 200px">
+    <form action="/action_page.php">
+        {% csrf_token %}
+  <div class="container">
+    <h1>ลงทะเบียนรายวิชา</h1>
+    <p>รายละเอียดลงทะเบียน</p>
+    <hr>
+    <div class="row">
+        <div class="col-6">
+            <label><b>เลขที่</b></label>
+            <label>xxxxx</label>
+            <label><b>วันที่ยืนยัน</b></label>
+            <label>xx/xx/25xx</label><br>
+            <label><b>ระดับการศึกษา</b></label>
+            <label>xxxxx</label><br>
+            <label><b>รหัสนักศึกษา</b></label>
+            <label>xxxxxxxxxxx-x</label><br>
+            <label><b>ชื่อนักศึกษา</b></label>
+            <label>xxxxx xxxx</label><br>
+            <label><b>สถานภาพ</b></label>
+            <label>xxxxx</label><br>
+            <label><b>อาจารย์ที่ปรึกษา</b></label>
+            <label>xxxxx xxxx</label>
+        </div>
+
+        <div class="col-6">
+            <label><b>สถานะ</b></label>
+            <label>xxxx</label><br>
+            <label><b>คณะ</b></label>
+            <label>xxxx</label><br>
+            <label><b>โปรแกรมวิชา</b></label>
+            <label>xxxx</label><br>
+            <label><b>สาขาวิชา</b></label>
+            <label>xxxx</label><br>
+            <label><b>ประเภทเวลา</b></label>
+            <label>xxxx</label>
+        </div>
+
+    <hr>
+    <p>รายวิชาที่ลงทะเบียน</p>
+    </div>
+      <div class="table-responsive">
+          <table class="table table-bordered table-hover text-center rounded-3" style="background-color: #0d6efd">
+              <thead>
+                <tr>
+                  <th><input type="checkbox"></th>
+                  <th>ลำดับ</th>
+                  <th>รหัสวิชา</th>
+                  <th>ชื่อวิชา</th>
+                  <th>หน่วยกิต</th>
+                  <th>ประเภทวิชา</th>
+                  <th>ลักษณะลงทะเบียน</th>
+                  <th>บันทึกเกรด</th>
+                  <th>กลุ่มเรียน</th>
+                  <th>ผู้สอน</th>
+                </tr>
+              </thead>
+          </table>
+      </div>
+
+    <center><button type="button" class="btn btn-primary">Primary</button></center>
+
+  </div>
+
+  <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+</form>
+</div>
+{% endblock %}
