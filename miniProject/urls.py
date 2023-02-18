@@ -20,4 +20,7 @@ from miniApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.base, name='base'),
+    path('showSubject',views.showSubject,name='showSubject'),
+    path('userLogin',views.userLogin,name='userLogin'),
+
 ]
