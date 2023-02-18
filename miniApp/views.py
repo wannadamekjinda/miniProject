@@ -9,3 +9,9 @@ def showSubject(request):
 
 def userLogin(request):
     return render(request,"userLogin.html")
+
+def rigister(request):
+    return render(request,'rigister.html')
+
+def showRigister(request):
+    return render(request,'showRigister.html')
