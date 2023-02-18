@@ -7,3 +7,7 @@ def userLogin(request):
     return render(request,"userLogin.html")
 def showRigister(request):
     return render(request,"showRigister.html")
+
+def showSubject(request):
+    return render(request,"showSubject.html")
+
