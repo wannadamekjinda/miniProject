@@ -29,14 +29,30 @@ class Subject(models.Model):
     subjectName = models.CharField(max_length=50, default="")
     subjectCredit = models.IntegerField(max_length=1, default="1")
 
+
     def __str__(self):
         return self.subjectId + ":" + self.subjectName + ":" + str(self.subjectCredit)
 
 class Gender(models.Model):
     genName = models.CharField(max_length=10, default="")
-
     def __str__(self):
         return self.genName
+
+class StudentStatus(models.Model):
+    statusName = models.CharField(max_length=30, default="")
+    def __str__(self):
+        return self.statusName
+
+class EducationLevel(models.Model):
+    eduLevelName = models.CharField(max_length=30, default="")
+    def __str__(self):
+        return self.eduLevelName
+
+class LearnGroup(models.Model):
+    groName = models.CharField(max_length=30, default="")
+    groDesc = models.TextField(max_length=300)
+    def __str__(self):
+        return self.groName + ":" + self.groDesc
 
 class Student(models.Model):
     studentId = models.CharField(max_length=15, primary_key=True, default="")
@@ -45,7 +61,12 @@ class Student(models.Model):
     studentLName = models.CharField(max_length=50, default="")
     studentAddress = models.TextField(max_length=400, default="")
     studentBirthdate = models.DateField(default=None)
-
+    statusName = models.ForeignKey(StudentStatus, on_delete=models.CASCADE, default="")
+    eduLevelName = models.ForeignKey(EducationLevel, on_delete=models.CASCADE, default="")
+    groName = models.ForeignKey(LearnGroup, on_delete=models.CASCADE, default="")
+    facName = models.ForeignKey(Faculty, on_delete=models.CASCADE, default="")
+    majorProName = models.ForeignKey(MajorProgram, on_delete=models.CASCADE, default="")
+    major = models.ForeignKey(Major, on_delete=models.CASCADE, default="")
     def __str__(self):
         return self.studentId + ":" + self.gender.genName + ":" + self.studentFName + ":" + self.studentLName
 
