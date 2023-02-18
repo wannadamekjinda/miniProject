@@ -43,9 +43,9 @@
     <p>รายวิชาที่ลงทะเบียน</p>
     </div>
       <div class="table-responsive">
-          <table class="table table-bordered table-hover text-center rounded-3" style="background-color: #0d6efd">
+          <table class="table table-bordered table-hover text-center rounded-3">
               <thead>
-                <tr>
+                <tr style="background-color: #0d6efd">
                   <th><input type="checkbox"></th>
                   <th>ลำดับ</th>
                   <th>รหัสวิชา</th>
@@ -66,7 +66,116 @@
             <button type="button" class="btn btn-danger">ยกเลิก</button>
           </div>
           <div class="col-5 text-center">
-            <button type="button" class="btn btn-primary">ค้นหารายวิชา</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#demo">เลือกรายวิชา</button>
+          </div>
+      </div>
+      <div class="offcanvas offcanvas-top" id="demo" style="height: 500px">
+          <div class="offcanvas-header">
+            <h1 class="offcanvas-title">ค้นหารายวิชา</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body">
+              <table class="table table-bordered table-hover text-center rounded-3">
+                      <thead>
+                        <tr style="background-color: #0d6efd">
+                          <th>เลือก</th>
+                          <th>ลำดับ</th>
+                          <th>รหัสวิชา</th>
+                          <th>ชื่อวิชา</th>
+                          <th>หน่วยกิต</th>
+                          <th>ประเภทวิชา</th>
+                          <th>ลักษณะลงทะเบียน</th>
+                          <th>บันทึกเกรด</th>
+                          <th>กลุ่มเรียน</th>
+                          <th>ผู้สอน</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>265-4</td>
+                            <td>Program</td>
+                            <td>2</td>
+                            <td>ปกติ</td>
+                            <td>ทั่วไป</td>
+                            <td>#</td>
+                            <td>#</td>
+                            <td>BIS3R1</td>
+                            <td>พ่อใหญ่พิช</td>
+                        </tr>
+                      <tr>
+                            <td><input type="checkbox"></td>
+                            <td>265-4</td>
+                            <td>Program</td>
+                            <td>2</td>
+                            <td>ปกติ</td>
+                            <td>ทั่วไป</td>
+                            <td>#</td>
+                            <td>#</td>
+                            <td>BIS3R1</td>
+                            <td>พ่อใหญ่พิช</td>
+                        </tr>
+                      <tr>
+                            <td><input type="checkbox"></td>
+                            <td>265-4</td>
+                            <td>Program</td>
+                            <td>2</td>
+                            <td>ปกติ</td>
+                            <td>ทั่วไป</td>
+                            <td>#</td>
+                            <td>#</td>
+                            <td>BIS3R1</td>
+                            <td>พ่อใหญ่พิช</td>
+                        </tr>
+                      <tr>
+                            <td><input type="checkbox"></td>
+                            <td>265-4</td>
+                            <td>Program</td>
+                            <td>2</td>
+                            <td>ปกติ</td>
+                            <td>ทั่วไป</td>
+                            <td>#</td>
+                            <td>#</td>
+                            <td>BIS3R1</td>
+                            <td>พ่อใหญ่พิช</td>
+                        </tr>
+                      <tr>
+                            <td><input type="checkbox"></td>
+                            <td>265-4</td>
+                            <td>Program</td>
+                            <td>2</td>
+                            <td>ปกติ</td>
+                            <td>ทั่วไป</td>
+                            <td>#</td>
+                            <td>#</td>
+                            <td>BIS3R1</td>
+                            <td>พ่อใหญ่พิช</td>
+                        </tr>
+                      <tr>
+                            <td><input type="checkbox"></td>
+                            <td>265-4</td>
+                            <td>Program</td>
+                            <td>2</td>
+                            <td>ปกติ</td>
+                            <td>ทั่วไป</td>
+                            <td>#</td>
+                            <td>#</td>
+                            <td>BIS3R1</td>
+                            <td>พ่อใหญ่พิช</td>
+                        </tr>
+                      <tr>
+                            <td><input type="checkbox"></td>
+                            <td>265-4</td>
+                            <td>Program</td>
+                            <td>2</td>
+                            <td>ปกติ</td>
+                            <td>ทั่วไป</td>
+                            <td>#</td>
+                            <td>#</td>
+                            <td>BIS3R1</td>
+                            <td>พ่อใหญ่พิช</td>
+                        </tr>
+                      </thead>
+                  </table>
+            <center><button class="btn btn-primary" type="button">ตกลง</button> <button class="btn btn-danger" type="button" class="btn-close" data-bs-dismiss="offcanvas">ยกเลิก</button></center>
           </div>
       </div>
 
