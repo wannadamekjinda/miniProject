@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load fontawesome_5 %}
+{% fontawesome_5_static %}
 {% block content %}
 <div class="row">
         <div class="col col-12 text-primary"><h3>รายวิชาที่ลงทะเบียน</h3></div>
@@ -47,7 +48,7 @@
           <td>@mdo</td>
           <td>@mdo</td>
         <td>
-            <button class="btn btn-sm  btn-danger disabled"> ถอน</button>
+            <button class="btn btn-sm  btn-success disabled text-center">{% fa5_icon 'plus' %} เพิ่ม</button>
         </td>
     </tr>
     <tr>
@@ -58,7 +59,7 @@
           <td>@mdo</td>
           <td>@mdo</td>
         <td>
-            <button class="btn btn-sm  btn-danger disabled"> ถอน</button>
+            <button class="btn btn-sm  btn-success disabled text-center"> {% fa5_icon 'plus' %}เพิ่ม</button>
         </td>
     </tr>
     <tr>
@@ -69,7 +70,7 @@
           <td>@mdo</td>
           <td>@mdo</td>
         <td>
-            <button class="btn btn-sm  btn-danger disabled"> ถอน</button>
+            <button class="btn btn-sm  btn-success disabled text-center"> {% fa5_icon 'plus' %}เพิ่ม </button>
         </td>
     </tr>
   </tbody>
