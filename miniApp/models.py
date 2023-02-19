@@ -27,8 +27,7 @@ class Major(models.Model):
 class Subject(models.Model):
     subjectId   = models.CharField(max_length=15, primary_key=True, default="")
     subjectName = models.CharField(max_length=50, default="")
-    subjectCredit = models.IntegerField(max_length=1, default="1")
-
+    subjectCredit = models.CharField(max_length=1, default="")
 
     def __str__(self):
         return self.subjectId + ":" + self.subjectName + ":" + str(self.subjectCredit)

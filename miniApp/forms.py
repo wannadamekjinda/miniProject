@@ -1,7 +1,7 @@
 from django import forms
 from .models import *
 
-class Faculty(forms.ModelForm):
+class FacultyForm(forms.ModelForm):
     class Meta:
         model = Faculty
         fields = ('facName', 'facDesc')
@@ -11,5 +11,18 @@ class Faculty(forms.ModelForm):
         }
         labels = {
             'facName' : 'ชื่อคณะ',
-            'facDesc' : 'รายละเอียดคณะ'
+            'facDesc' : 'รายละเอียดคณะ',
+        }
+
+class MajorProgramForm(forms.ModelForm):
+    class Meta:
+        model = MajorProgram
+        fields = ('majProName', 'majorProDesc')
+        widgets = {
+            'majorProName': forms.TextInput(attrs={'class': 'from-control', 'size': 50, 'maxlenght':50}),
+            'majorProDesc': forms.TextInput(attrs={'class': 'from-control', 'row':3}),
+        }
+        labels = {
+            'majorProName' : 'ชื่อโปรแกรมวิชา',
+            'majorProDesc' : 'รายละเอียดโปรแกรมวิชา',
         }
