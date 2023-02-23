@@ -3,36 +3,42 @@
 {% load fontawesome_5 %}
 {% block content %}
     <div class="row">
-        <div class="col col-4 "> <br> </div>
+        <div class="col col-4 "><br></div>
         <div class="col col-4 rounded-3" style="background-color: #6f42c1;">
             <br>
-        <center><img src="../static/images/LOGO.png"  class="bd-placeholder-img rounded-circle" width="140" height="140"></center>
-            <form method="POST" class="form-control" style="width: 100%; height: 70%; padding-top: 70px; margin-top: -70px">
+            <center><img src="../static/images/LOGO.png" class="bd-placeholder-img rounded-circle" width="140"
+                         height="140"></center>
+            <form method="POST" class="form-control"
+                  style="width: 100%; height: 70%; padding-top: 70px; margin-top: -70px">
+                {% if messages %}
+                    <ul class="messages text-center fw-bold">
+                        {% for message in messages %}
+                            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
                 {% csrf_token %}
                 <table class="table rounded-3" style="background-color: #6f42c1">
                     <tr class="logo"></tr>
-                    <tr><td width="40%">User Name</td><td><input type="text" name="userName" value="{{ userName }}" required></td></tr>
-                    <tr><td>Password</td><td><input type="password" name="userPass" value="" required></td></tr>
-                    <tr> <td colspan="2" align="center">
-                        <input type="submit" value="Login" class="btn btn-primary">
-                        <input type="reset" value="Reset" class="btn btn-danger">
-                        <div class="col col-4 ">Register<br> </div>
-                    </td></tr>
-
-
-                    {%  if messages|length > 0 %}
-                        <tr>
-                            <td colspan="2" align="center" class="text-danger bold">
-                                {% for message in messages %}
-                                    {{ message | safe }}
-                                {% endfor %}
-                            </td>
-                        </tr>
-                    {%  endif %}
+                    <tr>
+                        <td width="40%">User Name</td>
+                        <td><input type="text" name="userName" value="{{ userName }}" required></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="userPass" value="{{ userPass }}" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Login" class="btn btn-primary">
+                            <input type="reset" value="Reset" class="btn btn-danger">
+                            <div class="col col-4 ">Register<br></div>
+                        </td>
+                    </tr>
                 </table>
             </form>
         </div>
-        <div class="col col-4"> <br> </div>
+        <div class="col col-4"><br></div>
     </div>
 
 {% endblock %}
