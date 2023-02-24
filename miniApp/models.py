@@ -42,6 +42,11 @@ class StudentStatus(models.Model):
     def __str__(self):
         return self.statusName
 
+class StudentSubject(models.Model):
+    subjectstudent = models.CharField(max_length=30, default="")
+    def __str__(self):
+        return self.subjectstudent
+
 class EducationLevel(models.Model):
     eduLevelName = models.CharField(max_length=30, default="")
     def __str__(self):
@@ -83,3 +88,10 @@ class Teacher(models.Model):
     def __str__(self):
         return self.teacherId + ":" + self.gender.genName + ":" + self.teacherFName + ":" + self.teacherLName
 
+class SubjectList(models.Model):
+    idSubject = models.CharField(max_length=50, default="")
+    nameSubject = models.CharField(max_length=50, default="")
+    credit = models.CharField(max_length=50, default="")
+    aj = models.CharField(max_length=50, default="")
+    def __str__(self):
+        return self.idSubject + ":" + self.nameSubject + ":" + self.credit + ":" + self.aj

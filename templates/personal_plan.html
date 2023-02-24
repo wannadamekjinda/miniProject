@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% block content %}
+<br><br>
+    <div class="row" style="padding-left: 200px">
+    <form action="/action_page.php">
+        {% csrf_token %}
+        <div class="container">
+
+    <h1>แผนการเรียนประจำตัวนักศึกษา</h1>
+    <H3>ชื่อ:</H3>
+    <H3>รหัส:</H3>
+
+         <table class="table table-hover text-primary table-bordered" style="border-color:blue">
+            <tbody><tr class="text-center">
+                <th rowspan="2" width="10%">ประเภท</th>
+                <th rowspan="2" width="40%">รหัส - ชื่อรายวิชา</th>
+                <th rowspan="2" width="6%">เกรด</th>
+                <th colspan="3" width="22%" class="text-center">
+                    หน่วยกิต
+                </th>
+                <th colspan="3" width="22%" class="text-center">
+                    คาบเรียน
+                </th>
+            </tr>
+            <tr class="text-center">
+                <th width="7%">ปีจัดทำ</th>
+                <th width="7%">ทฤษฎี</th>
+                <th width="7%">ปฏิบัติ</th>
+                <th width="7%">รวม</th>
+                <th width="7%">ทฤษฎี</th>
+                <th width="7%">ปฏิบัติ</th>
+            </tr>
+                <tr>
+                    <td>ระบุวิชา</td>
+                    <td>รหัส-ชื่อรายวิชา</td>
+                    <td class="text-center">0.25</td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"></td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                </tr>
+                <tr>
+                    <td>ระบุวิชา</td>
+                    <td>รหัส-ชื่อรายวิชา</td>
+                    <td class="text-center">0.25</td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"></td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                </tr>
+                <tr>
+                    <td>ระบุวิชา</td>
+                    <td>รหัส-ชื่อรายวิชา</td>
+                    <td class="text-center">0.25</td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"></td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                </tr>
+                <tr>
+                    <td>ระบุวิชา</td>
+                    <td>รหัส-ชื่อรายวิชา</td>
+                    <td class="text-center">0.25</td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"></td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                </tr>
+                <tr>
+                    <td>ระบุวิชา</td>
+                    <td>รหัส-ชื่อรายวิชา</td>
+                    <td class="text-center">0.25</td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"></td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                </tr>
+                <tr>
+                    <td>ระบุวิชา</td>
+                    <td>รหัส-ชื่อรายวิชา</td>
+                    <td class="text-center">0.25</td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"></td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                </tr>
+                <tr>
+                    <td>ระบุวิชา</td>
+                    <td>รหัส-ชื่อรายวิชา</td>
+                    <td class="text-center">0.25</td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"></td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                </tr>
+                <tr>
+                    <td>ระบุวิชา</td>
+                    <td>รหัส-ชื่อรายวิชา</td>
+                    <td class="text-center">0.25</td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"></td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                </tr>
+                <tr>
+                    <td>ระบุวิชา</td>
+                    <td>รหัส-ชื่อรายวิชา</td>
+                    <td class="text-center">0.25</td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"></td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                </tr>
+                <tr>
+                    <td>ระบุวิชา</td>
+                    <td>รหัส-ชื่อรายวิชา</td>
+                    <td class="text-center">0.25</td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"></td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                    <td class="text-center"> </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </form>
+    </div>
+{% endblock %}

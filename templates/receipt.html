@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load fontawesome_5 %}
+{% fontawesome_5_static %}
+    <head>
+    <meta charset="UTF-8">
+    <title>base.html</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet " href="stylesheet/bt523/css/bootstrap.css">
+    <script src="stylesheet/bt523/js/bootstrap.bundle.js"></script>
+    <script>
+         function myFunction() {
+          window.print();
+         }
+    </script>
+</head>
+<br><br>
+<div class="row" style="padding-left: 200px">
+    <form action="/action_page.php">
+        {% csrf_token %}
+      <div class="container">
+        <h1>ใบแจ้งชำระเงิน</h1>
+          <hr>
+          <div class="row">
+        <div class="col-6">
+            <label><b>รหัสนักศึกษา - ชื่อ - นามสกุล :</b></label>
+            <label>xxxxx</label><br>
+            <label><b>ภาคการศึกษา/ปีการศึกษา :</b></label>
+            <label>xxxxx</label><br>
+            <label><b>เลขที่ใบแจ้งชำระ :</b></label>
+            <label>xxxxxxxxxxx-x</label><br>
+            <label><b>สถานะการชำระเงิน :</b></label>
+            <label>xxxxx xxxx</label><br>
+            <label><b>วันครบกำหนดชำระ :</b></label>
+            <label>xxxxx</label><br>
+            <label><b>อัตราค่าปรับ ต่อวัน :</b></label>
+            <label>xxxxx xxxx</label><br>
+            <label><b>การชำระเงิน :</b></label>
+            <label>xxxxx xxxx</label>
+        </div><hr>
+    <p>รายการการชำระเงิน</p>
+      </div>
+          <div class="table-responsive">
+          <table class="table table-bordered table-hover text-center rounded-3">
+              <thead>
+                <tr style="background-color: #0d6efd">
+                  <th>ลำดับ</th>
+                  <th>เลขที่ใบแจ้งชำระ</th>
+                  <th>รหัสนักศึกษา/รหัสสอบ</th>
+                  <th>ชื่อ-นามสกุล</th>
+                  <th>กลุ่มเรียน</th>
+                  <th>จำนวนเงิน</th>
+                </tr>
+              <tr>
+                  <td>1</td>
+                  <td>145523980-9</td>
+                  <td>65342310273-6</td>
+                  <td>นายธีระพงษ์ ภูทอง</td>
+                  <td>BIS3R2</td>
+                  <td>12,000</td>
+              </tr>
+              </thead>
+          </table>
+      </div>
+          <div class="col-11 text-center">
+            <button type="button" class="btn btn-success" onclick="myFunction()"><i class="fas fa-print"></i>พิมพ์ใบแจ้งชำระ</button>
+          </div>
+      </div>
+    </form>
+</div>
+{% endblock %}

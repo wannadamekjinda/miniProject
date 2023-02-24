@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <br><br>
 <div class="row" style="padding-left: 200px">
@@ -89,96 +90,25 @@
                           <th>กลุ่มเรียน</th>
                           <th>ผู้สอน</th>
                         </tr>
+                   {% for subject in subjectList %}
                         <tr>
                             <td><input type="checkbox"></td>
                             <td>265-4</td>
                             <td>Program</td>
-                            <td>2</td>
-                            <td>ปกติ</td>
-                            <td>ทั่วไป</td>
+                            <td>{{ subject.idSubject }}</td>
+                            <td>{{ subject.nameSubject }}</td>
+                            <td>{{ subject.credit }}</td>
                             <td>#</td>
                             <td>#</td>
                             <td>BIS3R1</td>
-                            <td>พ่อใหญ่พิช</td>
+                            <td>{{ subject.aj }}</td>
                         </tr>
-                      <tr>
-                            <td><input type="checkbox"></td>
-                            <td>265-4</td>
-                            <td>Program</td>
-                            <td>2</td>
-                            <td>ปกติ</td>
-                            <td>ทั่วไป</td>
-                            <td>#</td>
-                            <td>#</td>
-                            <td>BIS3R1</td>
-                            <td>พ่อใหญ่พิช</td>
-                        </tr>
-                      <tr>
-                            <td><input type="checkbox"></td>
-                            <td>265-4</td>
-                            <td>Program</td>
-                            <td>2</td>
-                            <td>ปกติ</td>
-                            <td>ทั่วไป</td>
-                            <td>#</td>
-                            <td>#</td>
-                            <td>BIS3R1</td>
-                            <td>พ่อใหญ่พิช</td>
-                        </tr>
-                      <tr>
-                            <td><input type="checkbox"></td>
-                            <td>265-4</td>
-                            <td>Program</td>
-                            <td>2</td>
-                            <td>ปกติ</td>
-                            <td>ทั่วไป</td>
-                            <td>#</td>
-                            <td>#</td>
-                            <td>BIS3R1</td>
-                            <td>พ่อใหญ่พิช</td>
-                        </tr>
-                      <tr>
-                            <td><input type="checkbox"></td>
-                            <td>265-4</td>
-                            <td>Program</td>
-                            <td>2</td>
-                            <td>ปกติ</td>
-                            <td>ทั่วไป</td>
-                            <td>#</td>
-                            <td>#</td>
-                            <td>BIS3R1</td>
-                            <td>พ่อใหญ่พิช</td>
-                        </tr>
-                      <tr>
-                            <td><input type="checkbox"></td>
-                            <td>265-4</td>
-                            <td>Program</td>
-                            <td>2</td>
-                            <td>ปกติ</td>
-                            <td>ทั่วไป</td>
-                            <td>#</td>
-                            <td>#</td>
-                            <td>BIS3R1</td>
-                            <td>พ่อใหญ่พิช</td>
-                        </tr>
-                      <tr>
-                            <td><input type="checkbox"></td>
-                            <td>265-4</td>
-                            <td>Program</td>
-                            <td>2</td>
-                            <td>ปกติ</td>
-                            <td>ทั่วไป</td>
-                            <td>#</td>
-                            <td>#</td>
-                            <td>BIS3R1</td>
-                            <td>พ่อใหญ่พิช</td>
-                        </tr>
+                      {% endfor %}
                       </thead>
                   </table>
             <center><button class="btn btn-primary" type="button">ตกลง</button> <button class="btn btn-danger" type="button" class="btn-close" data-bs-dismiss="offcanvas">ยกเลิก</button></center>
           </div>
       </div>
-
   </div>
 </form>
 </div>

@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import *
+from miniApp .forms import *
 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -52,7 +53,10 @@ def userLogin(request):
         return render(request, 'userLogin.html', data)
 
 def enroll_in1(request):
-    return render(request,"enroll_in1.html")
+    subjectList = SubjectList.objects.all().order_by('idSubject')
+    context = {'subjectList': subjectList}
+    return render(request, "enroll_in1.html", context)
+
 
 def addRigister(request):
     return render(request,"addRigister.html")
@@ -64,3 +68,20 @@ def faculty(request):
     facultys = Faculty.objects.all().order_by('id')
     context = {'categories': facultys}
     return render(request,"CRUD/faculty.html", context)
+
+def rigister(request):
+    return render(request,"rigister.html")
+
+def personal_plan(request):
+    return render(request,"personal_plan.html")
+
+def receipt(request):
+    return render(request,"receipt.html")
+
+def subjectList(request):
+    subjectList = SubjectList.objects.all().order_by('idSubject')
+    context = {'subjectList': subjectList}
+    return render(request, "subjectList.html",context)
+
+
+

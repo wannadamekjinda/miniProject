@@ -81,8 +81,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'enrollin',
-        'USER': 'peetchie',
-        'PASSWORD': '02247',
+        'USER': 'teerapong',
+        'PASSWORD': '12345678',
         'HOST': 'localhost',
         'PORT': '3306',
     }

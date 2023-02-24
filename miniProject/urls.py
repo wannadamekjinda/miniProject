@@ -24,6 +24,11 @@ urlpatterns = [
     path('delRigister', views.addRigister, name='addRigister'),
     path('addRigister', views.delRigister, name='delRigister'),
     path('enroll_in1',views.enroll_in1,name='enroll_in1'),
+    path('rigister',views.rigister,name='rigister'),
+    path('personal_plan',views.personal_plan,name='personal_plan'),
+    path('receipt',views.receipt,name='receipt'),
+    path('subjectList', views.subjectList, name='subjectList'),
+    # path('subjectNew', views.subjecNew, name='subjectNew'),
 
     #CRUD
     path('faculty', views.faculty,name="faculty")
