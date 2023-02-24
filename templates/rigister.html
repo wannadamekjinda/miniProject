@@ -1,10 +1,54 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load fontawesome_5 %}
 {% block content %}
     <div class="row">
-        <div class="col col-12 rounded-1" style="background-color: #0dcaf0; ">
-        <h5>ลงทะเบียนรายวิชา</h5>
-            <h6>รายละเอียดใบลงทะเบียน</h6>
+        <div class="col col-3"><br></div>
+        <div class="col col-1 rounded-3" style="background-color: #6f42c1; width: auto; height: auto; margin-left: 55px">
+            <br>
+            <center><img src="../static/images/LOGO.png" class="bd-placeholder-img rounded-circle" width="140"
+                         height="140"></center>
+            <form method="POST" class="form-control" style="width: auto; height: 72%; padding-top: 70px; margin-top: -70px">
+                {% if messages %}
+                    <ul class="messages text-center fw-bold">
+                        {% for message in messages %}
+                            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                {% csrf_token %}
+                <table class="table rounded-3" style="background-color: #6f42c1; color: white">
+                    <tr class="logo"></tr>
+                    <tr>
+                        <td width="40%">Firstname</td>
+                        <td><input type="text" name="firstname" value="{{ firstname }}" required></td>
+                        <td width="40%">Lastname</td>
+                        <td><input type="text" name="lastname" value="{{ lastname }}" required></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td><input type="phone" name="phone" value="{{ phone }}" required></td>
+                        <td>Email</td>
+                        <td><input type="email" name="email" value="{{ email }}" required></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password" value="{{ id }}" required></td>
+                        <td>ConfirmPassword</td>
+                        <td><input type=" confirmpassword" name="confirmpassword" value="{{ password }}" required></td>
+                    </tr>
+                    <tr>
+                        <td style="color: #6f42c1">
+                            hsdadasas<br>
+                            ssad
+                        </td>
+                    </tr>
+                </table>
+                <center><button type="submit" class="btn btn-primary" style="margin-top: -120px"><a href="{% url 'userLogin' %}" style="color: #f0f0f0;">Register</a></button></center>
+            </form>
         </div>
+        <div class="col col-4"><br></div>
     </div>
+
 {% endblock %}
+
